@@ -9,6 +9,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
+      packages: write
     env:
       registry-type: ghcr.io
     strategy:
