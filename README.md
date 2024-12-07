@@ -21,3 +21,8 @@ RUN ant {Put the required task for build your project here}
 
 Please note the steps to build your project should follow the way that you did. So it is not always the same with the sample that shown above 
 
+## Available version(s)
+<ul>
+    <li> 11 (used OpenJDK 11.0.16)</li>
+<ul>
+
