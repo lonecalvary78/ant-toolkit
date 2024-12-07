@@ -6,6 +6,9 @@ on:
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     env:
       registry-type: ghcr.io
     strategy:
