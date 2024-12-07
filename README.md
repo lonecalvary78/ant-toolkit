@@ -1,4 +1,7 @@
 # Ant Toolkit
+[![build-and-push-image](https://github.com/lonecalvary78/ant-toolkit/actions/workflows/build-and-push.yaml/badge.svg)](https://github.com/lonecalvary78/ant-toolkit/actions/workflows/build-and-push.yaml)
+
+
 ## Introduction
 This is the conatiner image of build toolkit I created for anyone who works their own java project when they were still using the Apache Ant
 
