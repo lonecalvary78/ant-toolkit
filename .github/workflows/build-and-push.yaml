@@ -24,4 +24,4 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           push: true
-          tag: ${{github.actor}}/ant-tooklit:11
+          tags: ${{github.actor}}/ant-tooklit:11
