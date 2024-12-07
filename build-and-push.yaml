@@ -1,0 +1,27 @@
+name: build-and-push-image
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    environment:
+      registry-type: ghcr.io
+    strategy:
+      matrix:
+        build-platform: ["linux/amd64","linux/arm64"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ${{ environment.registry-type }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/login-action@v3
+        with:
+          platform: ${{ matrix.build-platform }}
+      - uses: docker/build-push-action@v6
+        with:
+          push: true
+          tag: ${{github.actor}}/ant-tooklit:11
