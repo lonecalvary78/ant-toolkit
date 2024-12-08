@@ -6,8 +6,8 @@ RUN yum install -y tar gzip && \
     rm apache-ant-1.10.15-bin.tar.gz && \
     mv apache-ant-1.10.15 ant && \
     yum autoremove -y tar gzip && \
-    yum clean all
+    yum clean all && \
+    rm -rf /var/cache/yum
 
-ENV ANT_HOME=/opt/ant    
-ENV PATH=$PATH:$ANT_HOME/bin    
-
+ENV ANT_HOME=/opt/ant \   
+    PATH=$PATH:$ANT_HOME/bin
